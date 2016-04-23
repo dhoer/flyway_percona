@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'flyway_percona::default' do
   let(:chef_run) do
-    ChefSpec::Runner.new(platform: 'centos', version: '6.4', log_level: :error, evaluate_guards: true) do |node|
+    ChefSpec::SoloRunner.new(platform: 'centos', version: '6.4', log_level: :error, evaluate_guards: true) do |node|
       #      ChefSpec::Server.create_environment('testing',  description: '...')
       Chef::Config[:client_key] = '/etc/chef/client.pem'
       node.set['mysql']['client']['package'] = 'Percona-Server-client-56'
