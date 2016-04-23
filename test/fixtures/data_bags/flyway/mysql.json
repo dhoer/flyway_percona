@@ -1,0 +1,27 @@
+{
+  "id": "mysql",
+  "root": {
+    "encrypted_data": "N41h7SmuaLjA7vvr/fbg/Da0CBCqv3VxcQYwi6S0Dq4=\n",
+    "iv": "sAB6q3lLDjDjiT53cIY+Zw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "backup": {
+    "encrypted_data": "cqOHO9r3i54/dw91fApxygeArTM8wlbugrwKbiox9GM=\n",
+    "iv": "oA2kBWTdfMrxaeoSIF5H+Q==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "replication": {
+    "encrypted_data": "yi2/dS1EcALVroClLTFmHBRRYOYkDtia4xsxvEzyCyA=\n",
+    "iv": "PDEQOOKsI8kuaWhr2qkmrQ==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "dba_admin": {
+    "encrypted_data": "EQDLyjQqR8AgobOfVJqw9HCrbMdGOMJfZW3RN1MjiKY=\n",
+    "iv": "5bpuUkUdOSpmMzbD1Yz9Zw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}
