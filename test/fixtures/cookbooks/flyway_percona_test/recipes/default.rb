@@ -17,14 +17,14 @@ end
 
 directory '/tmp/db'
 
-cookbook_file "/tmp/db/example.conf" do
-  source "example.conf"
+cookbook_file '/tmp/db/example.conf' do
+  source 'example.conf'
   mode '0755'
   action :create
 end
 
-cookbook_file "/tmp/db/V0.21.0__Creation_Script.sql" do
-  source "V0.21.0__Creation_Script.sql"
+cookbook_file '/tmp/db/V0.21.0__Creation_Script.sql' do
+  source 'V0.21.0__Creation_Script.sql'
   mode '0755'
   sensitive true
   action :create
@@ -36,9 +36,9 @@ flywaydb 'actaspire-db' do
     url: 'jdbc:mysql://127.0.0.1:3306/mysql',
     schemas: 'example',
     user: 'root',
-    locations: "filesystem:/tmp/db",
+    locations: 'filesystem:/tmp/db',
     cleanDisabled: true
   )
-  flyway_conf "/tmp/db/example.conf"
+  flyway_conf '/tmp/db/example.conf'
   sensitive true
 end
