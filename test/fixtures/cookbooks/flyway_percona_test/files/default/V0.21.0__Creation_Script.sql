@@ -15,13 +15,13 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema example
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `example` DEFAULT CHARACTER SET utf8 ;
-USE `example` ;
+#CREATE SCHEMA IF NOT EXISTS `example` DEFAULT CHARACTER SET utf8 ;
+#USE `example` ;
 
 -- -----------------------------------------------------
 -- Table `example`.`accomodationlookup`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `example`.`accomodationlookup` ;
+#DROP TABLE IF EXISTS `example`.`accomodationlookup` ;
 
 CREATE TABLE IF NOT EXISTS `example`.`accomodationlookup` (
   `id` BIGINT(20) NOT NULL AUTO_INCREMENT,
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `example`.`accomodationlookup` (
 -- -----------------------------------------------------
 -- Table `example`.`accomodationsubjectlookup`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `example`.`accomodationsubjectlookup` ;
+#DROP TABLE IF EXISTS `example`.`accomodationsubjectlookup` ;
 
 CREATE TABLE IF NOT EXISTS `example`.`accomodationsubjectlookup` (
   `id` BIGINT(20) NOT NULL AUTO_INCREMENT,
