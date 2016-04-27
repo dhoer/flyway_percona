@@ -27,3 +27,13 @@ suites:
   run_list:
     - flyway_percona_test::default
   attributes:
+
+- name: 3.2.1
+  data_bags_path: ./test/fixtures/data_bags
+  encrypted_data_bag_secret_key_path: ./test/fixtures/data_bags/encrypted_data_bag_secret
+  run_list:
+    - flyway_percona_test::default
+  attributes:
+    flywaydb:
+      url: https://bintray.com/artifact/download/business/maven/flyway-commandline-3.2.1-linux-x64.tar.gz
+      sha256: 8b9ba320a69b8cdef6de60118e312d3cbe96ca37a24b8aec7be4cdf4950bb5fe

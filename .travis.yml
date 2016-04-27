@@ -14,6 +14,7 @@ services:
 env:
   matrix:
   - INSTANCE=default-centos-6
+  - INSTANCE=321-centos-6
 
 # Don't `bundle install`
 install: echo "skip bundle install"
