@@ -1,4 +1,6 @@
-# Flyway Percona    
+# Flyway Percona 
+  
+![Build Status](https://travis-ci.org/dhoer/flyway_percona.svg?branch=master)
 
 The intention of this repo is to demonstrate an incompatibility with Flyway 4.0 against a percona mysql database.  Specifically, the flyway metadata table (the default `schema_version` or a configured one), is created, but not populated after a successful migration.
 
