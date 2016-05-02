@@ -44,7 +44,7 @@ remote_file connector_src do
   action :create
 end
 
-execute "tar xzf #{connector_src} -C /opt/flyway/drivers"
+execute "tar xzf #{connector_src} -C /opt/flyway/drivers --strip 1"
 
 flywaydb 'actaspire-db' do
   params(
