@@ -31,6 +31,22 @@ cookbook_file '/tmp/db/V0.21.0__Creation_Script.sql' do
 end
 
 flywaydb 'actaspire-db' do
+  action :install
+end
+
+connector_src = "#{Chef::Config[:file_cache_path]}/mysql-connector-java-5.1.38.tar.gz"
+
+remote_file connector_src do
+  source 'https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.38.tar.gz'
+  owner 'flyway'
+  group 'flyway'
+  mode '0755'
+  action :create
+end
+
+execute "tar xzf #{connector_src} -C /opt/flyway/drivers"
+
+flywaydb 'actaspire-db' do
   params(
     password: 'r00t',
     url: 'jdbc:mysql://127.0.0.1:3306/mysql',
